@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors</title>
+</head>
+<body>
+    <h1>Visitors Log</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>IP Address</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Device</th>
+            <th>Access Time</th>
+        </tr>
+        {% for visitor in visitors %}
+        <tr>
+            <td>{{ visitor.id }}</td>
+            <td>{{ visitor.ip_address }}</td>
+            <td>{{ visitor.country }}</td>
+            <td>{{ visitor.city }}</td>
+            <td>{{ visitor.device }}</td>
+            <td>{{ visitor.access_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
